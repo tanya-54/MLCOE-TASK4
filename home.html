@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Medical Cost Prediction</title>
+
+  <!-- CSS -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <style>
+    body {
+      background-color: #f4f4f4;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav {
+      background-color: #512da8;
+    }
+
+    .brand-logo {
+      font-size: 1.5rem;
+    }
+
+    .container {
+      margin-top: 20px;
+    }
+
+    h1, h4 {
+      color: #d32f2f;
+    }
+
+    label {
+      font-size: 1.2rem;
+      color: #512da8;
+    }
+
+    input {
+      border: 1px solid #512da8;
+      border-radius: 4px;
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+
+    button {
+      background-color: #512da8;
+    }
+
+    .page-footer {
+      background-color: #1976d2;
+      margin-top: 20px;
+      padding-top: 10px;
+      color: #fff;
+    }
+
+    .navbar-links {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .navbar-links li {
+      display: inline;
+      margin-right: 20px;
+    }
+
+    .navbar-links a {
+      color: #fff;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="purple darken-4 accent-3" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="#" class="brand-logo">Logo</a>
+      <ul class="right hide-on-med-and-down navbar-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="sidenav">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h1 class="header center red-text">Medical Cost Prediction</h1>
+      <div class="row center">
+        <h5 class="header col s12 light black-text">Predict the cost for your Medical Insurance!</h5>
+      </div>
+
+      <div class="row">
+        <form action='/predict' method="post" class="col s12">
+          <div class="row">
+            <form action='/predict' method="post" class="col s12">
+              <div class="row">
+                <div class="input-field col s4">
+                  <label for="age" style="font-size: 20px"><b>Age</b></label>
+                  <br>
+                  <input placeholder="Age" name="age" id="age" type="text" class="validate">
+                </div>
+          
+                <div class="input-field col s4">
+                  <label for="gender" style="font-size: 20px"><b>Gender</b></label>
+                  <br>
+                  <input id="gender" name="gender" placeholder="0 - Male/1 - Female" type="text" class="validate">
+                </div>
+          
+                <div class="input-field col s4">
+                  <label for="bmi" style="font-size: 20px"><b>BMI</b></label>
+                  <br>
+                  <input id="bmi" name="bmi" placeholder="BMI" type="text" class="validate">
+                </div>
+          
+                <div class="input-field col s4">
+                  <label for="children" style="font-size: 20px"><b>Children</b></label>
+                  <br>
+                  <input id="children" name="children" placeholder="0 for None" type="text" class="validate">
+                </div>
+          
+                <div class="input-field col s4">
+                  <label for="smoker" style="font-size: 20px"><b>Do you Smoke?</b></label>
+                  <br>
+                  <input id="smoker" name="smoker" placeholder="1 - Yes/0 - No" type="text" class="validate">
+                </div>
+          
+                <div class="input-field col s4">
+                  <label for="region" style="font-size: 20px"><b>Which Region?</b></label>
+                  <br>
+                  <input id="region" name="region" placeholder="0-NW/1-NE/2-SE/3-SW" type="text" class="validate">
+                </div>
+              </div>
+          
+              <div class="row center">
+                <button type="submit" class="btn-large waves-effect waves-light lamber lighten-1">Predict Probability</button>
+              </div>
+            </form>
+          </div>
+        </form>
+      </div>
+
+      
+
+  <footer class="page-footer light-blue lighten-1">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5>Company Bio</h5>
+          <p>We are a team of college students working on this project like it's our full-time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
+        </div>
+
+        <div class="col l3 s12">
+          <h5>Settings</h5>
+          <ul>
+            <li><a href="#!">Link 1</a></li>
+            <li><a href="#!">Link 2</a></li>
+            <li><a href="#!">Link 3</a></li>
+            <li><a href="#!">Link 4</a></li>
+          </ul>
+        </div>
+
+        <div class="col l3 s12">
+          <h5>Connect</h5>
+          <ul>
+            <li><a href="#!">LinkedIn</a></li>
+            <li><a href="#!">GitHub</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  
+</body>
